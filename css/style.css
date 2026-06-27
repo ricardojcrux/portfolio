@@ -700,3 +700,14 @@ textarea {
         font-size: 1.15rem;
     }
 }
+
+@media (min-width: 992px) {
+    #contactMe {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        max-height: 100vh !important;
+        padding-top: 80px !important;
+        padding-bottom: 20px !important;
+        overflow: hidden;
+    }
+}
