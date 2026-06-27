@@ -303,6 +303,7 @@ nav {
     background-color: transparent !important;
     color: #ffffff !important;
     border-color: #ffffff !important;
+    transform: translateY(-2px);
     box-shadow: 0 6px 22px rgba(255, 255, 255, 0.15);
 }
 
@@ -1242,7 +1243,7 @@ textarea {
     }
     
     .coverflow-btn {
-        display: none; /* Ocultamos flechas en móvil para interactuar por toque/swipe */
+        display: none;
     }
     
     .up {
