@@ -24,6 +24,8 @@ body {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Layout y alturas de Sección */
@@ -77,6 +79,8 @@ nav {
                 url('../images/mountain_landscape.png') no-repeat center center;
     background-size: cover;
     position: relative;
+    min-height: 100dvh !important;
+    height: 100dvh !important;
 }
 
 .scroll-indicator {
@@ -239,6 +243,7 @@ nav {
 .knowledges-section {
     background-color: #ffffff;
     color: var(--bg-dark);
+    overflow-x: hidden; /* Evita desbordamiento horizontal en celulares */
 }
 
 .coverflow-container {
@@ -476,6 +481,11 @@ nav {
     background-color: transparent;
 }
 
+.contact-lead {
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
 .form-control, .form-select {
     padding: 8px 12px;
     border-radius: 8px;
@@ -643,6 +653,30 @@ textarea {
     
     .contact-info {
         border: none !important;
+        padding: 20px 15px !important;
+    }
+    
+    .contact-lead {
+        font-size: 0.9rem !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .service-card {
+        height: 280px !important; /* 30% más pequeña que 420px */
+    }
+    
+    .service-card-content {
+        padding: 15px 12px !important;
+    }
+    
+    .service-card-content h3 {
+        font-size: 1rem !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .service-card-content p {
+        font-size: 0.78rem !important;
+        line-height: 1.4 !important;
     }
     
     .coverflow-slider {
