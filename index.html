@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,17 @@
     <meta name="google-site-verification" content="IcXRAgjvK2VSJXvfrva7r88gCFaPj-b8bhjw3CE0Ns4" />
     <title>Ricardo Zapata Cruz | Portfolio</title>
 
+    <!-- Google Fonts: Outfit (modern sans-serif) & Playfair Display (elegant serif for subtitles) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- CSS del Portfolio -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Importamos bootstrap -->
+    <!-- Importamos Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Importamos ITI para el codigo de cada pais -->
@@ -19,264 +25,318 @@
 
     <!-- Importamos AOS para animaciones -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 </head>
 
 <body>
 
+    <!-- Navegación -->
     <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark p-md-2 p-3">
-        <div class="container-fluid">
-            <button id="navbar-toggler" class="order-1 navbar-toggler" type="button"
+        <div class="container-fluid justify-content-center">
+            <button id="navbar-toggler" class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="order-lg-2 collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#aboutMe">Sobre Mi</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#aboutMe">About Me</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#knowledges">Conocimientos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#knowledges">Knowledges</a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#services">Servicios</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#mainProjects">Main Projects</a>
-                    </li>
-                    <li class="nav-item align-items-start">
-                        <a class="nav-link" href="#contactMe">Contact Me!</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="order-lg-3 order-2">
-                <ul class="navbar-nav fs-3 d-flex flex-row">
-                    <li class="nav-item me-lg-3 me-5">
-                        <a class="nav-link bi-github" target="_blank" href="https://www.github.com/ricardojcrux/"></a>
-                    </li>
-                    <li class="nav-item me-lg-3 me-5">
-                        <a class="nav-link bi-linkedin" target="_blank" href="https://www.linkedin.com/in/ricardojcrux/"></a>
-                    </li>
-                    <li class="nav-item me-lg-0 me-3">
-                        <a class="nav-link bi-twitter" target="_blank" href="https://www.twitter.com/ricardojcrux/"></a>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#contactMe">Contáctanos</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Héroe / Banner -->
     <div id="banner" class="banner container-fluid d-flex align-items-center vh-100">
-        <div class="banner-grid container py-2" data-aos="fade-down" data-aos-duration="1000">
-            <div class="row text-center">                                             
-                <div class="col-md-5 my-auto">
-                    <img class="profile-photo img-fluid mt-md-0 my-3" src="images/profilePhoto.png">
-                </div>
-                <div class="col-md-7 mb-3 text-white text-md-start text-center d-flex flex-column justify-content-around">
-                    <div class="banner-text d-flex flex-column justify-content-between">
-                        <h2>Hi, my name is
-                            <span class="d-block fs-1 text-warning">Ricardo Zapata Cruz</span>
-                            </h3>
-                            <p class="lead text-start mx-md-0 mx-3">
-                                <i class="text-success bi-laptop"></i> I'm a software developer in proccess <br>
-                                <i class="text-warning bi-geo-alt-fill"></i> Cali, Valle del Cauca, Colombia <br>
-                                <i class="text-danger bi-suit-heart-fill"></i> Python
-                            </p>
-                    </div>
-                    <div class="d-grid gap-2 col-md-6 col-6 mx-auto">
-                        <a class="btn btn-success" target="_blank"
-                            href="https://wa.me/573013229292?text=Hello,%20I%20am%20interested%20in%20a%20quotation%20for%20the%20service%20I%20require">
-                            <p class="fs-5 mb-1"><i class="bi-whatsapp"></i> Contact me!!!</p>
-                        </a>
-                    </div>
-                </div>
+        <div class="banner-content container text-center" data-aos="fade-down" data-aos-duration="1200">
+            <h1 class="hero-name text-white">Ricardo Zapata Cruz</h1>
+            <p class="hero-title text-white">Desarrollador de Software</p>
+            <div class="hero-button-container mt-4">
+                <a class="btn hero-btn" href="#contactMe">
+                    <i class="bi bi-send animate-send"></i> Contáctanos
+                </a>
             </div>
+        </div>
+        <!-- Indicador de Desplazamiento -->
+        <div id="scroll-indicator" class="scroll-indicator">
+            <span>desliza hacia abajo</span>
+            <i class="bi bi-chevron-double-down"></i>
         </div>
     </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path fill="#323846" fill-opacity="1" d="M0,128L40,138.7C80,149,160,171,240,154.7C320,139,400,85,480,85.3C560,85,640,139,720,138.7C800,139,880,85,960,85.3C1040,85,1120,139,1200,154.7C1280,171,1360,149,1400,138.7L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
-
-    <div id="aboutMe" class="about-me container mt-5">
-        <h2 class="subtitle" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
-            ABOUT ME
-        </h2>
-        <div class="row text-justify">
-            <div class="col-lg-3 col-md-6 mx-auto d-md-block d-flex" data-aos="fade-up" data-aos-once="true" data-aos-duration="2000" data-aos-delay="500">
-                <img class="about-img my-3 rounded" src="images/univalle.png">
-                <p class="lead my-auto ms-md-0 ms-2">I'm Currently studing software development at Universidad del Valle</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mx-auto d-md-block d-flex" data-aos="fade-up" data-aos-once="true" data-aos-duration="2000" data-aos-delay="1000">
-                <img class="about-img my-3 rounded" src="images/maths.png">
-                <p class="lead my-auto ms-md-0 ms-2">Passionate about maths and software, and both together</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mx-auto d-md-block d-flex" data-aos="fade-up" data-aos-once="true" data-aos-duration="2000" data-aos-delay="1500">
-                <img class="about-img my-3 rounded" src="images/goal.png">
-                <p class="lead my-auto ms-md-0 ms-2">Focused on achieving my goals as a software developer</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mx-auto d-md-block d-flex" data-aos="fade-up" data-aos-once="true" data-aos-duration="2000" data-aos-delay="2000">
-                <img class="about-img my-3 rounded" src="images/idea.png">
-                <p class="lead my-auto ms-md-0 ms-2">Creative and daily looking for ideas to create something new</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="knowledges" class="knowledges container mt-5 mb-4">
-        <h2 class="subtitle text-end" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-anchor-placement="bottom-bottom">
-            KNOWLEDGES
-        </h2>
-        <div class="row">
-            <div class="col-lg-3 col-sm-6 mt-3" data-aos="flip-down" data-aos-duration="2000" data-aos-delay="500" data-aos-once="true" data-aos-anchor-placement="top-bottom">
-                <div class="card">
-                    <img src="images/web.jpg" class="card-img card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Web Development</h5>
-                        <p class="card-text lead">Creation of webpages for individuals and companies using languages such as HTML, CSS and JS, and WordPress. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-3" data-aos="flip-down" data-aos-duration="2000" data-aos-delay="1000" data-aos-once="true" data-aos-anchor-placement="top-bottom">
-                <div class="card">
-                    <img src="images/python.jpg" class="card-img card-img-top">
-                    <div class="card-body lead">
-                        <h5 class="card-title text-center">Python</h5>
-                        <p class="card-text">I've made basic apps using libraries like Numpy and Matplotlib for Data Analysis and Django for Web Development</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-3" data-aos="flip-down" data-aos-duration="2000" data-aos-delay="1500" data-aos-once="true" data-aos-anchor-placement="top-bottom">
-                <div class="card">
-                    <img src="images/backend.png" class="card-img card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Backend and Database</h5>
-                        <p class="card-text lead">Connect the visual interface or front-end with the back-end and databases via API to synchronize all the information.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-3" data-aos="flip-down" data-aos-duration="2000" data-aos-delay="2000" data-aos-once="true" data-aos-anchor-placement="top-bottom">
-                <div class="card">
-                    <img src="images/data.jpg" class="card-img card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Data Analysis</h5>
-                        <p class="card-text lead">I can analyze data using Excel and Python, with its data libraries, to obtain a model that projects the behavior of the data. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#323846" fill-opacity="1" d="M0,60L1440,0L1440,320L0,320Z"></path></svg>
-    
-    <div id="mainProjects" class="projects container-fluid text-white">
-        <div class="container text-center pt-4 pb-5">
-            <h2 class="main text-center pb-4" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-anchor-placement="bottom-bottom">
-                MAIN PROJECTS
+    <!-- Sección Sobre Mi -->
+    <div id="aboutMe" class="about-me-section py-5">
+        <div class="container">
+            <h2 class="subtitle text-center mb-5" data-aos="fade-down" data-aos-duration="1200" data-aos-once="true">
+                SOBRE MI
             </h2>
-            <div class="row mt-3">
-                <div class="col-lg-7" data-aos="zoom-in" data-aos-anchor-placement="top-center" data-aos-once="true" data-aos-duration="1500">
-                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <div class="row">
+                <!-- Card 1: Estudios -->
+                <div class="col-lg-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+                    <div class="about-card text-center">
+                        <div class="about-card-icon mb-3">
+                            <i class="bi bi-mortarboard"></i>
                         </div>
-                        <div class="carousel-inner rounded border border-light border-5">
-                            <div class="carousel-item active">
-                                <img src="images/mokepon.png" class="d-block w-100">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/calculadora.png" class="d-block w-100">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/matrix.png" class="d-block w-100">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/memory-card.jpg" class="d-block w-100">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/construservis.png" class="d-block w-100">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                        <h3>Estudios</h3>
+                        <p>Actualmente me encuentro estudiando desarrollo de software en la Universidad del Valle</p>
                     </div>
                 </div>
-                <div class="col-lg-5 mt-lg-0 mt-3 d-flex flex-column justify-content-around">
-                    <div id="carouselCaption" class="h-50 d-flex rounded pt-4 pb-2 px-3">
-                        <div class="caption d-none rounded justify-content-center">
-                            <a class="btn btn-outline-light w-50" target="_blank" href="https://www.github.com/ricardojcrux/platzi-mokepon">Mokepon Platzi Proyect</a>
-                            <p class="mt-2 mx-3">Dynamic webpage created following the course given by Platzi, using HTML, CSS and Javascript</p>
+                <!-- Card 2: Pasiones -->
+                <div class="col-lg-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
+                    <div class="about-card text-center">
+                        <div class="about-card-icon mb-3">
+                            <i class="bi bi-laptop"></i>
                         </div>
-                        <div class="caption d-none rounded justify-content-center">
-                            <a class="btn btn-outline-light w-50" target="_blank" href="https://www.github.com/ricardojcrux/calculadora">Python Calculator</a>
-                            <p class="mt-2 mx-3">Basic Calculator created using Python for the calculations and Tkinter to design the visual interface</p>
-                        </div>
-                        <div class="caption d-none rounded justify-content-center">
-                            <a class="btn btn-outline-light w-50" target="_blank" href="https://www.github.com/ricardojcrux/matrix-calculator">Matrix Calculator</a>
-                            <p class="mt-2 mx-3">Used to get some matrix properties such as inverse matriz and determinant, using Numpy and Tkinter</p>
-                        </div>
-                        <div class="caption d-none rounded justify-content-center">
-                            <a class="btn btn-outline-light w-50" target="_blank" href="https://www.github.com/ricardojcrux/projects">Memory Card</a>
-                            <p class="mt-2 mx-3">Game created together with university classmates, using Python and OPP for logic and GTK for visual interface</p>
-                        </div>
-                        <div class="caption d-none rounded justify-content-center">
-                            <a class="btn btn-outline-light w-50" target="_blank" href="https://construservisalfayomega.com">Construservia Alfa y Omega</a>
-                            <p class="mt-2 mx-3">Website made using WordPress and JavaScript for a construction company</p>
-                        </div>
+                        <h3>Pasiones</h3>
+                        <p>Soy un apasionado de los números y la programación, y la combinación de ambas</p>
                     </div>
-                    <div class="bg-dark rounded pt-3 pb-4 px-4 mt-lg-0 mt-3" data-aos="fade-up" data-aos-once="true" data-aos-duration="2000">
-                        <p class="text-white">All my projects are locked in my GitHub repository.</p>
-                        <a class="btn btn-outline-light" target="_blank" href="https://www.github.com/ricardojcrux/">
-                            <i class="bi-github"></i>
-                            GitHub repository
-                        </a>
+                </div>
+                <!-- Card 3: Objetivos -->
+                <div class="col-lg-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+                    <div class="about-card text-center">
+                        <div class="about-card-icon mb-3">
+                            <i class="bi bi-bullseye"></i>
+                        </div>
+                        <h3>Objetivos</h3>
+                        <p>Enfocado totalmente en conseguir mis metas como desarrollador de software</p>
+                    </div>
+                </div>
+                <!-- Card 4: Visión -->
+                <div class="col-lg-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">
+                    <div class="about-card text-center">
+                        <div class="about-card-icon mb-3">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <h3>Vision</h3>
+                        <p>Creativo y diariamente en búsqueda de nuevas ideas con el fin de crear cosas novedosas</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#1d1e33" fill-opacity="1" d="M0,60L1440,0L0,0Z"></path></svg>
+    <!-- Divisor con patrón binario -->
+    <div class="binary-divider">
+        <div class="binary-pattern">0100110001010011010011000101001101001100010100110100110001010011010011000101001101001100010100110100110001010011010011000101001101001100010100110100110001010011</div>
+    </div>
 
-    <div id="contactMe" class="container-fluid d-flex align-items-center mt-4">
-        <div class="container d-flex justify-content-center">
-            <div class="landing row bg-light rounded border d-flex justify-content-center px-3">
-                <div class="col-md-6 py-3">
-                    <h2 class="fs-1 text-start">Contact Me!</h2>
-                    <p class="lend fs-5">If you need help or advice creating your website for your business, social
-                        event, school, etc., please don't hesitate to contact me! </p>
-                    <p class="lend fst-italic text-center">Type your contact info and I'll get back to you soon!</p>
+    <!-- Sección Conocimientos (Carrusel 3D) -->
+    <div id="knowledges" class="knowledges-section py-5">
+        <div class="container">
+            <h2 class="subtitle text-center mb-5" data-aos="fade-down" data-aos-duration="1200" data-aos-once="true">
+                CONOCIMIENTOS
+            </h2>
+            
+            <!-- Carrusel Coverflow 3D -->
+            <div class="coverflow-container" data-aos="zoom-in" data-aos-duration="1200" data-aos-once="true">
+                <button class="coverflow-btn prev-btn"><i class="bi bi-chevron-left"></i></button>
+                <div class="coverflow-slider">
+                    <!-- Slide 1: Desarrollo Web -->
+                    <div class="coverflow-slide">
+                        <div class="coverflow-card">
+                            <div class="coverflow-card-img" style="background-image: url('images/skill_web.png')"></div>
+                            <div class="coverflow-card-content text-center">
+                                <h3>Desarrollo Web</h3>
+                                <p>Creación de sitios y aplicaciones modernas con React, NextJS, Astro y Bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Desarrollo de APIs -->
+                    <div class="coverflow-slide">
+                        <div class="coverflow-card">
+                            <div class="coverflow-card-img" style="background-image: url('images/skill_api.png')"></div>
+                            <div class="coverflow-card-content text-center">
+                                <h3>Desarrollo de APIs</h3>
+                                <p>Diseño y construcción de APIs REST robustas utilizando NestJS, FastAPI y Express.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3: Bases de Datos -->
+                    <div class="coverflow-slide">
+                        <div class="coverflow-card">
+                            <div class="coverflow-card-img" style="background-image: url('images/skill_db.png')"></div>
+                            <div class="coverflow-card-content text-center">
+                                <h3>Bases de Datos</h3>
+                                <p>Modelado relacional con Postgres e integración con ORMs según el lenguaje.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4: Automatizaciones -->
+                    <div class="coverflow-slide">
+                        <div class="coverflow-card">
+                            <div class="coverflow-card-img" style="background-image: url('images/skill_auto.png')"></div>
+                            <div class="coverflow-card-content text-center">
+                                <h3>Automatización de Procesos</h3>
+                                <p>Flujos de trabajo inteligentes con n8n y scripts de automatización con Python.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5: Chatbots -->
+                    <div class="coverflow-slide">
+                        <div class="coverflow-card">
+                            <div class="coverflow-card-img" style="background-image: url('images/skill_bot.png')"></div>
+                            <div class="coverflow-card-content text-center">
+                                <h3>Chatbots y Comunicación</h3>
+                                <p>Bots inteligentes con WhatsApp API y soporte omnicanal mediante Chatwoot.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 6: Facturación Electrónica -->
+                    <div class="coverflow-slide">
+                        <div class="coverflow-card">
+                            <div class="coverflow-card-img" style="background-image: url('images/skill_siigo.png')"></div>
+                            <div class="coverflow-card-content text-center">
+                                <h3>Facturación Electrónica</h3>
+                                <p>Integración de SIIGO API para emisión automática de facturas y notas electrónicas.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 py-3">
+                <button class="coverflow-btn next-btn"><i class="bi bi-chevron-right"></i></button>
+                <div class="coverflow-dots"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Servicios -->
+    <div id="services" class="services-section py-5 text-white">
+        <div class="container text-center">
+            <h2 class="subtitle text-center mb-5" data-aos="fade-down" data-aos-duration="1200" data-aos-once="true">
+                SERVICIOS
+            </h2>
+            <div class="row">
+                <!-- Servicio 1 -->
+                <div class="col-lg-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true">
+                    <div class="service-card">
+                        <div class="service-card-bg" style="background-image: url('images/service_web.png')"></div>
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <h3>DESARROLLO WEB</h3>
+                            <p>Creación de sitios web para emprendimientos y empresas, adaptados a sus requerimientos y objetivos</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="col-lg-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true">
+                    <div class="service-card">
+                        <div class="service-card-bg" style="background-image: url('images/service_edu.png')"></div>
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <h3>PROYECTOS EDUCATIVOS</h3>
+                            <p>Asesoría personalizada a proyectos y asignaciones relacionadas con la programación y el desarrollo de software</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="col-lg-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+                    <div class="service-card">
+                        <div class="service-card-bg" style="background-image: url('images/service_tech.png')"></div>
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <h3>SOPORTE TÉCNICO</h3>
+                            <p>Mantenimiento de hardware y de software a equipos de cómputo portátiles y de mesa. Soporte técnico remoto y presencial</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Servicio 4 -->
+                <div class="col-lg-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">
+                    <div class="service-card">
+                        <div class="service-card-bg" style="background-image: url('images/service_opt.png')"></div>
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <h3>OPTIMIZACIÓN DE PROCESOS</h3>
+                            <p>Creación de estrategias para optimizar procesos repetitivos y monótonos en la rutina laboral, automatizando archivos locales y remotos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <a class="btn service-quote-btn" target="_blank" href="https://wa.me/573013229292?text=Hola,%20estoy%20interesado%20en%20una%20cotizaci%C3%B3n%20para%20un%20servicio.">
+                    <i class="bi bi-laptop"></i> Cotiza tu servicio
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Contáctanos -->
+    <div id="contactMe" class="contact-section py-5">
+        <div class="container">
+            <h2 class="subtitle text-center mb-5" data-aos="fade-down" data-aos-duration="1200" data-aos-once="true">
+                CONTÁCTANOS
+            </h2>
+            <div class="row" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+                <!-- Columna Izquierda: Información -->
+                <div class="col-md-5 p-4 p-lg-5 contact-info d-flex flex-column justify-content-between text-start">
+                    <div>
+                        <p class="lead fs-5 text-muted mb-4">
+                            Si necesitas ayuda u orientación sobre tu sitio web, o tu proyecto de programación, no dudes en ponerte en contacto con nosotros.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="social-block mt-4">
+                            <h4 class="fs-5 fw-bold mb-3 text-dark">Redes Sociales</h4>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a class="social-btn" target="_blank" href="https://www.github.com/ricardojcrux/" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                                <a class="social-btn" target="_blank" href="https://www.linkedin.com/in/ricardojcrux/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a class="social-btn" target="_blank" href="https://wa.me/573013229292" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                            </div>
+                        </div>
+                        <div class="credit-text mt-4 pt-3 border-top text-muted" style="font-size: 0.85rem;">
+                            Página hecha por <a class="text-dark text-decoration-none fw-bold" target="_blank" href="https://www.github.com/ricardojcrux">Ricardo Zapata Cruz</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna Derecha: Formulario -->
+                <div class="col-md-7 p-4 p-lg-5 contact-form-wrapper text-start">
                     <form id="contactForm" method="dialog" class="needs-validation" novalidate>
-                        <p class="form-label fs-3 fst-italic">Personal Information</p>
-                        <div class="row mb-3">
-                            <div class="col-lg-6">
-                                <input type="text" class="form-control" id="firstName" placeholder="First Name"
-                                    required>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label text-muted">Nombre *</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Pedro" required>
                             </div>
-                            <div class="col-lg-6 mt-lg-0 mt-3">
-                                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label text-muted">Apellido *</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Pérez" required>
                             </div>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="Email Address" autocomplete="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="number" class="form-control" id="phone" placeholder=" Phone Number" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" id="textarea" rows="5" placeholder="Type here your request in detail" required></textarea>
-                        </div>
-                        <div class="d-md-block d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="col-12">
+                                <label for="email" class="form-label text-muted">Email *</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@email.com" autocomplete="email" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="country" class="form-label text-muted">País *</label>
+                                <select class="form-select" id="country" required>
+                                    <option value="" disabled>Seleccione...</option>
+                                    <option value="Colombia" selected>Colombia</option>
+                                    <option value="Estados Unidos">Estados Unidos</option>
+                                    <option value="Venezuela">Venezuela</option>
+                                    <option value="Ecuador">Ecuador</option>
+                                    <option value="Perú">Perú</option>
+                                    <option value="España">España</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="phone" class="form-label text-muted">Teléfono *</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="textarea" class="form-label text-muted">Déjanos tu mensaje *</label>
+                                <textarea class="form-control" id="textarea" rows="3" placeholder="Escriba acá su requerimiento en detalle" required></textarea>
+                            </div>
+                            <div class="col-12 text-md-start text-center">
+                                <button type="submit" class="btn btn-dark px-4 py-2 text-white mt-2">Enviar</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -284,54 +344,10 @@
         </div>
     </div>
 
-    <div id="code" class="code container my-4 d-flex flex-column" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-        <div class="row px-md-0 px-4 my-1">
-            <div class="col-lg-8 col-md-10 border rounded py-3 mx-auto">
-                <h2 class="text-center">I code in <span class="lead d-block">(coding languages I use)</span></h2>
-                <div class="mt-4 d-flex flex-wrap justify-content-center">
-                    <img class="rounded"
-                        src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-                        alt="HTML5">
-                    <img class="rounded"
-                        src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-                        alt="CSS3">
-                    <img class="rounded"
-                        src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
-                        alt="JS">
-                    <img class="rounded"
-                        src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"
-                        alt="Bootstrap">
-                    <img class="rounded"
-                        src="https://img.shields.io/badge/Wordpress-21759B?style=for-the-badge&logo=wordpress&logoColor=white"
-                        alt="WordPress">    
-                    <img class="rounded"
-                        src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
-                        alt="Python">
-                    <img class="rounded"
-                        src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"
-                        alt="Java">
-                    <img class="rounded"
-                        src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"
-                        alt="C++">
-                    <img class="rounded"
-                        src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"
-                        alt="MySQL">
-                    <img class="rounded"
-                        src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white"
-                        alt="SQLite">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="bg-dark text-center text-white py-1">
-        <p class="lead mt-3"> Webpage made by &nbsp; <a class="btn btn-outline-light" target="_blank"
-                href="https://www.github.com/ricardojcrux">Ricardo Zapata Cruz</a></p>
-    </footer>
-
-    <!-- Boton de Ir Arriba -->
+    <!-- Botón de Ir Arriba -->
     <a id="up" href="#" class="up">
-        <i class="bi-arrow-up-square"></i>
+        <i class="bi bi-arrow-up-short"></i>
+        <span class="up-text">Ir arriba</span>
     </a>
 
     <!-- Scripts propios -->
@@ -345,7 +361,7 @@
 
     <!-- Inicializadores de scripts -->
     <script type="module" src="js/country_codes.js"></script>
-    <script> AOS.init() </script>
+    <script> AOS.init(); </script>
 </body>
 
 </html>
