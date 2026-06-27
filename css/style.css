@@ -438,7 +438,7 @@ nav {
 }
 
 .service-card-content p {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.5;
     margin-bottom: 0;
@@ -611,44 +611,17 @@ textarea {
 }
 
 /* Responsividad */
-@media (max-width: 992px) {
-    .hero-name {
-        font-size: 3.2rem;
-    }
-    
-    .hero-title {
-        font-size: 1.6rem;
-    }
-    
-    .coverflow-slider {
-        height: 420px;
-    }
-    
-    .coverflow-slide {
-        width: 280px;
-        height: 360px;
-    }
-    
-    .coverflow-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
-    }
-    .prev-btn { left: 0px; }
-    .next-btn { right: 0px; }
-}
-
 @media (max-width: 768px) {
     .hero-name {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
     
     .hero-title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
     
     .subtitle {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
     
     .contact-info {
@@ -657,12 +630,12 @@ textarea {
     }
     
     .contact-lead {
-        font-size: 0.9rem !important;
+        font-size: 1rem !important;
         margin-bottom: 15px !important;
     }
     
     .service-card {
-        height: 280px !important; /* 30% más pequeña que 420px */
+        height: 280px !important; /* ~30% más pequeña que 420px */
     }
     
     .service-card-content {
@@ -670,26 +643,40 @@ textarea {
     }
     
     .service-card-content h3 {
-        font-size: 1rem !important;
+        font-size: 1.1rem !important;
         margin-bottom: 6px !important;
     }
     
     .service-card-content p {
-        font-size: 0.78rem !important;
+        font-size: 0.85rem !important;
         line-height: 1.4 !important;
     }
     
     .coverflow-slider {
-        height: 380px;
+        height: 400px;
     }
     
     .coverflow-slide {
-        width: 250px;
-        height: 320px;
+        width: 270px;
+        height: 340px;
     }
     
     .coverflow-card-img {
-        height: 150px;
+        height: 160px;
+    }
+
+    .coverflow-card-content {
+        padding: 15px 12px !important;
+    }
+    
+    .coverflow-card-content h3 {
+        font-size: 1.15rem !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .coverflow-card-content p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
     }
     
     .coverflow-btn {
@@ -705,6 +692,15 @@ textarea {
 }
 
 @media (max-width: 576px) {
+    .hero-name {
+        font-size: 2.1rem;
+    }
+    .hero-title {
+        font-size: 1.15rem;
+    }
+    .subtitle {
+        font-size: 1.5rem;
+    }
     .coverflow-slider {
         height: 320px;
     }
@@ -716,27 +712,28 @@ textarea {
         height: 120px;
     }
     .coverflow-card-content {
-        padding: 16px;
+        padding: 12px !important;
     }
     .coverflow-card-content h3 {
-        font-size: 1.1rem;
-        margin-bottom: 6px;
+        font-size: 1.05rem !important;
+        margin-bottom: 4px !important;
     }
     .coverflow-card-content p {
-        font-size: 0.8rem;
+        font-size: 0.78rem !important;
+        line-height: 1.35 !important;
     }
-    .subtitle {
-        font-size: 1.5rem;
+    .service-card {
+        height: 250px !important;
     }
-    .hero-name {
-        font-size: 2.1rem;
+    .service-card-content p {
+        font-size: 0.8rem !important;
     }
-    .hero-title {
-        font-size: 1.15rem;
+    .contact-lead {
+        font-size: 0.85rem !important;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 769px) {
     #contactMe {
         height: 100vh !important;
         min-height: 100vh !important;
